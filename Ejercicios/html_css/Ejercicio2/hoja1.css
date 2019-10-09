@@ -1,0 +1,9 @@
+h1 {
+  color: blue;
+  text-decoration: underline;
+}
+
+strong {
+  color: blue;
+  font-weight: bold;
+}

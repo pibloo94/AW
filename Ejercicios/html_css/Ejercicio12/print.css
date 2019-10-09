@@ -1,0 +1,29 @@
+body {
+  font-family: arial;
+}
+
+@page {
+margin: 2cm;
+}
+
+nav, .lateral, footer {
+  display: none;
+}
+
+section {
+  margin-top: 1.5cm;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 1cm;
+  font-size: 14px, bold;
+}
+
+span {
+  text-decoration: underline;
+}

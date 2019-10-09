@@ -1,0 +1,59 @@
+*{
+/*  border: 1px solid lime;*/
+}
+
+html{
+  height: 100%;
+  background: linear-gradient(white, black);
+  font-family: sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  color: white;
+  text-align: center;
+  background: black;
+}
+
+section{
+  color: white;
+  float: left;
+  width: 100%;
+}
+
+section img{
+  width: 40%;
+  height: 30%;
+  padding-top: 10%;
+}
+
+.section_left{
+  float: left;
+  width: 49%;
+}
+
+.section_right{
+  float: right;
+  width: 50%;
+}
+
+.section_form{
+  width: 30%;
+}
+
+form{
+  margin-top: 70%;
+  margin-left: 10%;
+  color: black;
+}
+
+form button{
+  background: black;
+  color: white;
+  margin-top: 1%;
+  padding: 2%;
+}

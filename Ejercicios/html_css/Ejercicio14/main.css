@@ -1,0 +1,63 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.contenido {
+  margin: 5%;
+  display: flex;
+}
+
+.contactos{
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 250px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.conversaciones{
+  background: linear-gradient(rgba(0,255,255,0.8), rgba(0,255,255,0.8)), url(resources/bla.png);
+  opacity: 80%;
+  width: 500px;
+  flex-grow: 2;
+  flex-shrink: 2;
+}
+
+.contacto {
+  display: flex;
+}
+
+.contacto_info h3:hover{
+  color: red;
+}
+
+.contacto .contacto_info {
+  flex-grow: 2;
+}
+
+.contactos > .contacto:not(:first-child) > .contacto_info  {
+  border-top: 1px solid white;
+}
+
+.contacto_img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border-radius: 50%;
+  max-width: 60%;
+  min-width: 60%;
+  cursor: pointer;
+}
+
+.ana {
+  margin-bottom: 2em;
+}

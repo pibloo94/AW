@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  background-color: red;
+}
+
+body{
+  background-color: white;
+}
+
+.bg{
+  width: 375px;
+  height: 375px;
+  border: 1px solid blue;
+  background-color: blue;
+  background-image: url(star.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /*background-position: center center;*/
+  background-size: 50% 50%;
+}

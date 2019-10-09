@@ -1,0 +1,77 @@
+body{
+  font-family: 'Indie Flower', cursive;
+  color: white;
+  background-color: black;
+  margin: 0;
+}
+
+header{
+  background-image: url(resources/cesped.png);
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  display: block;
+}
+
+h1{
+
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  margin-top: 100px;
+  margin-left: 2%;
+}
+
+nav a{
+  background-image: linear-gradient(green, yellow, green);
+  text-decoration: none;
+  color: black;
+  padding: 10px 25px;
+}
+
+nav a:hover{
+  background-image: linear-gradient(grey, lightgrey, grey);
+}
+
+section{
+  width: 75%;
+  float: left;
+  margin-top: 140px;
+  margin-left: 2%;
+  margin-right: 3%;
+}
+
+h2{
+  color: green;
+}
+
+.amarillo{
+  color: yellow;
+}
+
+.lateral{
+  width: 20%;
+  float: left;
+  margin-top: 110px;
+  align-content: center;
+}
+
+h3{
+  color: yellow;
+}
+
+footer{
+  clear: both;
+  background-color: green;
+  font-style: italic;
+  margin: 0;
+  padding-left: 2%;
+  padding-top: 1%;
+}
+
+footer a{
+  color: white;
+  margin-right: 2%;
+}

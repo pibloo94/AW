@@ -1,0 +1,26 @@
+p {
+  padding: 5px;
+  background-color: #F0F0FF;
+}
+
+p.flotante_izq {
+  float: left;
+  width: 40%;
+  background-color: #FFA000;
+}
+
+p.flotante_dch {
+  float: right;
+  width: 40%;
+  background-color: #FFA000;
+}
+
+.p2{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p4{
+  clear: left;
+}

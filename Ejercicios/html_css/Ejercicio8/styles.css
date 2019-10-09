@@ -1,0 +1,44 @@
+
+a {
+  border: inherit;
+  color: blue !important;
+  display: block;
+}
+
+p > a {
+  color: red;
+}
+
+.enlace {
+  color: purple;
+}
+
+#fdi {
+  color: green;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+p.cuadro {
+  border: 2px dashed blue;
+  padding: 20px;
+  /*display: none;*/
+  visibility: hidden;
+}
+
+li{
+  display: inline;
+}
+
+div.articulo {
+  margin-left: 20px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-image: url(...);
+  border-radius: 10px;
+}
+div.articulo h2 {
+  color: #902020;
+}

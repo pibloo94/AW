@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio formulario UCM</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="separador1"></div>
+      <img class="block" src="resources/logo.png" alt="logo de la UCM">
+      <h1 class="web_title block">Acceso Web Unificado</h1>
+      <div class="separador2"></div>
+    </header>
+    <div class="contenido">
+      <h2>Acceso Web Unificado a la UCM (Web SSO)</h2>
+      <p>
+        Identificarse correctamente en esta página le habilitará la entrada en la mayoría de las aplicaciones
+        y en los servicios en la nube @UCM.
+      </p>
+      <div class="contenido_top">
+        <div class="imagen">
+            <img class="llaves" src="resources/llaves.png" alt="imagen cuenta">
+        </div>
+        <form class="formulario" action="index.html" method="post">
+          <div class="campos_nombre">
+              <label for="txt_nombre">Dirección de correo UCM</label>
+              <input type="text" name="correo">
+          </div>
+          <br>
+          <div class="formularios_password">
+              <label for="txt_nombre">Contraseña</label>
+              <input type="password" name="pw">
+          </div>
+          <button type="submit" name="iniciar">Iniciar sesión</button>
+        </form>
+      </div>
+      <div class="separador3"></div>
+      <div class="contenido_bottom">
+        <a class="enlace1" href="https://idm.ucm.es/perl/idmResetPwdAuth.pl">¿Olvidó la contraseña?</a>
+        <br>
+        <a class="enlace1" href="https://www.ucm.es/faq/">Más información</a>
+        <p>Si no dispones de correo UCM pulsa <a clas="enlace2" href="https://www.ucm.es/login/index.php">aquí</a></p>
+      </div>
+    </div>
+    <div class="separador4"></div>
+  </body>
+</html>

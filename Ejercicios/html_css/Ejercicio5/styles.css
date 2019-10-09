@@ -1,0 +1,100 @@
+body{
+  font-family: Arial;
+}
+
+h1{
+  color: lightgray;
+  text-align: center;
+  background: #F00E37;
+  padding: 3%;
+}
+
+.navigation{
+  padding: 1%;
+  text-decoration: none;
+  margin-right: 2px;
+  background: #9F1E1E;
+  color: white;
+}
+
+.navigation:hover{
+  background: lightgray;
+  color: black;
+}
+
+.navigation:active{
+  background: green;
+  color: white;
+}
+
+.navigation:visited{
+  background: grey;
+  color: black;
+}
+
+.rojo{
+  color: #F00E37;
+}
+
+.resaltado{
+  background: lightgray;
+}
+
+#tc{
+  font-style: italic;
+}
+
+#td tr:nth-child(even){
+  color: blue;
+}
+
+#td tr:nth-child(odd){
+  background: lightgray;
+  color: red;
+}
+
+table{
+  margin-top: 3%;
+  border: 2px solid lightgray;
+}
+
+td{
+  padding: 5px;
+}
+
+.table_tittle{
+  background: lightgray;
+  padding: 3%;
+}
+
+.table_day{
+  background: lightgray;
+}
+
+.table_desayuno{
+  background: red;
+}
+
+.table_break{
+  background: blue;
+}
+
+.table_comida{
+  background: lime;
+}
+
+.horario_desayuno{
+  background: orange;
+}
+
+.horario_break{
+  background: #9C70E1;
+}
+
+.horario_comida{
+  background: yellow;
+}
+
+img[src$="png"] {
+  background: black;
+}

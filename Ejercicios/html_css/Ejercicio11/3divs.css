@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  /*border: 1px solid lime;*/
+}
+
+html {
+  background: linear-gradient(to top, black, lightgray);
+}
+
+div {
+  width: 30%;
+  margin: 1%;
+  float: left;
+  border: 2px solid gray;
+  border-radius: 1em;
+  background: lightgray;
+}
+
+h3{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+p{
+  margin: 3%;
+}
+
+.algo{
+  position: fixed;
+  top: 100px;
+  left: 50px;
+}

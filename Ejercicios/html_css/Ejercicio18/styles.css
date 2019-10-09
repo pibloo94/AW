@@ -1,0 +1,16 @@
+input{
+  margin: 5px;
+}
+
+select{
+  margin: 5px;
+}
+
+#text_observ {
+  display: block;
+  width: 30em;
+  height: 5em;
+  background: linear-gradient(to bottom, white, #E0E0E0);
+  border: 1px solid #A0A0A0;
+  color: blue;
+}

@@ -1,0 +1,36 @@
+*{
+  border: 1px solid lime;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    /*font-family: "Times New Roman", Times, serif;*/
+    font-family: Impact, Charcoal, sans-serif;
+    background-color: #FFF0F0;
+}
+
+h1 {
+    border-left: 5px solid #006000;
+    border: 1px solid #006000;
+    padding-left: 10px;
+    color:#006000;
+    background-color: #E0F0E0;
+}
+strong {
+    font-family: "Inconsolata", monospace;
+    color: #006000;
+    background-color: #E0E0E0;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+ol {
+  /*list-style-type: lower-alpha;*/
+  list-style-type: armenian;
+}
+
+ul {
+  /*list-style-type: square;*/
+  list-style-type: none;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ejercicio audio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <audio src="sample_audio.mp3" controls></audio>
+    <video width="320" height="240" controls>
+      <source src="sample_video.mp4" type="video/mp4">
+    </video>
+
+    <form class="formulario" action="index.html" method="post">
+      <input type="text" name="nombre" placeholder="Introducir nombre" required><br>
+      <input type="text" name="apellidos" placeholder="Introducir apellidos" pattern="[A-Za-z]"><br>
+      Password: <input type="password" name="pw" pattern=".{6,}" title="Six or more characters"><br>
+      <input type="number" name="edad"><br>
+      <input type="range" name="peso" min="30" max="200"><br>
+      <input type="color" name="color_favorito"><br>
+      <input type="date" name="fecha_nacimiento"><br>
+      <textarea name="observaciones" id="text_observ">Texto por defecto</textarea><br>
+      Fumador/a:<input type="checkbox" name="fuma" value="si"><br>
+      Sexo:
+      <input type="radio" name="sexo" value="hombre"> Hombre
+      <input type="radio" name="sexo" value="mujer"> Mujer<br>
+      <select name="opt">
+        <option value="fut">Fútbol</option>
+        <option value="bal">Baloncesto</option>
+        <option value="nat">Natación</option>
+        <option value="ten">Tenis</option>
+        <option value="pad">Pádel</option>
+      </select><br>
+      <button type="submit" name="enviar">Enviar</button>
+      <button type="reset" name="borrar">Borrar</button>
+      <button type="button" name="boton">Boton</button>
+    </form>
+  </body>
+</html>
