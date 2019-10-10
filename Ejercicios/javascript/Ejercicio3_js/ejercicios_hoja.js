@@ -63,6 +63,24 @@ producto([1, 2], [1, 2, 3]);
  elemento inicial x. La función debe aplicar f_1 a x, y pasar el resultado a f_2 que a 
  su vez le pasará el resultado a f_3 y así sucesivamente. Se piden tres versiones 
  diferentes de la función sequence:*/
+function isFuntionsArray(funciones){
+    if(!(funciones instanceof Array)){
+        return false;
+    }
+
+    let i = 0;
+    let esFuncion = true; 
+    
+    while(i < funciones.length && esFuncion){
+        if(funciones[i] instanceof Function){
+            esFuncion = false;
+        }
+
+        i++;
+    }
+
+    return esFuncion;
+}
 
 /*Implementar la función sequence1 suponiendo que ninguna de las funciones del array 
 recibido devuelve el valor undefined.*/
@@ -140,11 +158,14 @@ let funcion4 = function indefinida(){
 }
 
 var funciones1 = [funcion1, funcion2, funcion3];
-var funciones2 = [funcion1, funcion4, funcion2];
+var funciones2 = [funcion1, funcion4, 23];
+
+console.log(isFuntionsArray(funciones1));
 
 sequence1(funciones1, 1);
 sequence2(funciones2, 2);
 sequence3(funciones2, 3, true);
+
 
 //--------EJERCICIO 3--------
 
