@@ -1,34 +1,5 @@
-
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-header {
-    background-color: gray;
-    text-align: center;
-}
-
 nav {
     padding: 1em;
-}
-
-nav>a {
-    border-radius: 5px;
-    color: white;
-    margin-left: 0.3em;
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 0.5em;
-}
-
-nav>a:hover {
-    background-color: lightblue;
-}
-
-main>h1 {
-    display: block;
-    text-align: center;
 }
 
 table {
@@ -36,13 +7,6 @@ table {
     background-color: lightgray;
     padding: 1%;
     border-radius: 5px;
-}
-
-.input_text {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    width: 100%;
 }
 
 .input_button {
@@ -63,11 +27,4 @@ table {
 #send {
     margin-top: 10px;
     margin-left: 100%;
-}
-
-@media only screen and (max-width: 550px) {
-	main, nav {
-	    display: flex;
-	    flex-direction: column;
-	}
 }

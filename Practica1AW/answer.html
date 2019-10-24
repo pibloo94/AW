@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>YOLO - Preguntas</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="answer.css">
 </head>
 
@@ -14,13 +15,13 @@
     <header>
         <img class="img_log" src="resources/images/yolo.png" alt="logo de yolo" height="150px" width="150px">
         <nav>
-            <a class="nav_a" href="">Perfil</a>
-            <a class="nav_a" href="">Amigos</a>
-            <a class="nav_a" href="">Preguntas</a>
+            <!-- TODO: EL NAV LUEGO HAY QUE CAMBIARLO -->
+            <a class="nav_a" href="/profile.html">Perfil</a>
+            <a class="nav_a" href="/friends.html">Amigos</a>
+            <a class="nav_a" href="/questions.html">Preguntas</a>
             <a class="nav_a" href="">Desconectar</a>
             <div class="nav_user">
-                <img class="nav_user_image" src="resources/images/profile_logo.png" alt="imagen de usuario"
-                    height="42.2px" width="42.2px">
+                <img class="nav_user_image" src="resources/images/profile_logo.png" alt="imagen de usuario" height="42.2px" width="42.2px">
                 <div class="nav_user_points">50 pts</div>
             </div>
         </nav>
@@ -43,7 +44,7 @@
                 </div>
                 <div class="answer" id="other">
                     <input class="input_radio" type="radio" name='ans' value="o" />
-                    <input type="text" name="other">
+                    <input class="input_text" type="text" name="other">
                 </div>
                 <input class="button" id="send" name="submit" type="submit" value="Responder" />
             </form>

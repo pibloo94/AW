@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>YOLO - Preguntas</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="questions.css">
 </head>
 
@@ -14,9 +15,10 @@
     <header>
         <img class="img_log" src="resources/images/yolo.png" alt="logo de yolo" height="150px" width="150px">
         <nav>
-            <a class="nav_a" href="">Perfil</a>
-            <a class="nav_a" href="">Amigos</a>
-            <a class="nav_a" href="">Preguntas</a>
+            <!-- TODO: EL NAV LUEGO HAY QUE CAMBIARLO -->
+            <a class="nav_a" href="/profile.html">Perfil</a>
+            <a class="nav_a" href="/friends.html">Amigos</a>
+            <a class="nav_a" href="/questions.html">Preguntas</a>
             <a class="nav_a" href="">Desconectar</a>
             <div class="nav_user">
                 <img class="nav_user_image" src="resources/images/profile_logo.png" alt="imagen de usuario" height="42.2px" width="42.2px">
@@ -28,25 +30,28 @@
         <h1>Preguntas seleccionadas aleatoriamente</h1>
         <div class="selection_quests">
             <div class="quest">
-              ¿Cuál es la peor película de las historia?
+                ¿Cuál es la peor película de las historia?
             </div>
             <div class="quest">
-              ¿En qué escuela primaria estudiaste?
+                ¿En qué escuela primaria estudiaste?
             </div>
             <div class="quest">
-              ¿Play o Nintendo?
+                ¿Play o Nintendo?
             </div>
             <div class="quest">
-              ¿Cuál es tu plato favorito?
+                ¿Cuál es tu plato favorito?
             </div>
             <div class="quest">
-              ¿Cuál es el personaje más irritante de Juego de Tronos?
+                ¿Cuál es el personaje más irritante de Juego de Tronos?
             </div>
         </div>
 
         <h1>¡Añade tus preguntas!</h1>
         <div class="add_questions">
-          <button class="add_button">Crear nueva pregunta</button>
+            <!-- TODO: EL FORM LUEGO HAY QUE CAMBIARLO -->
+            <form action="/question.html">
+                <button class="add_button">Crear nueva pregunta</button>
+            </form>
         </div>
     </main>
 </body>
