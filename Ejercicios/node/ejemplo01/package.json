@@ -1,0 +1,14 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "ejemplo1 de nmp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pablo Agudo Brun",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
