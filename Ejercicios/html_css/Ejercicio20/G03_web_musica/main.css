@@ -34,7 +34,7 @@ nav {
     background: linear-gradient(#f1f1f1, #ffffff, #ffffff);
     grid-area: nav;
     margin-top: 6.8em;
-		min-width: 70px;
+	min-width: 70px;
     padding-top: 1em;
     color: black;
     position: fixed;

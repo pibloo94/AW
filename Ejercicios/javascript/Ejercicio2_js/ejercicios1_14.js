@@ -125,8 +125,8 @@ Object.keys(o).forEach((prop)=> console.log(" -" + prop));
 //EJERCICIO 13
 
 function createObject(properties){
-    var obj = {};
-    var i = 0;
+    let obj = {};
+    let i = 0;
 
     for(elem of properties){
         obj[elem] = properties[i];

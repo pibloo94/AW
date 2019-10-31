@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Photo by Estée Janssens on Unsplash */
+    background-image: url(resources/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    background-color: teal;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    text-shadow: 2px 4px 6px #CE5937;
+    width: 50%;
+    font-size: 4em;
+    color: #FFFFFF;
+}
+
+h1:hover {
+    text-shadow: 0 0 10px #FFFFFF;
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 25%;
+}
+
+.user_image {
+    display: inline-block;
+    margin-right: 5%;
+    margin: 1%;
+}
+
+.user_mail {
+    color: #FFFFFF;
+    margin: 2%;
+}
+
+.user_disconect {
+    margin: 2%;
+    color: #00008B;
+}
+
+.user_disconect:hover {
+    color: #FFFFFF;
+}
+
+.user_disconect:active {
+    color: lightgray;
+}
+
+.user_info>div {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 200px 20% 0 20%;
+}
+
+#t2 {
+    opacity: 0.5;
+}
+
+h3 {
+    display: inline;
+}
+
+.task {
+    background-color: rgb(228, 124, 92);
+    border: 2px solid rgb(121, 54, 33);
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.task_end {
+    text-decoration: line-through;
+}
+
+.task_button {
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    float: right;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.task>button:hover {
+    background-color: lightgray;
+}
+
+.tag {
+    padding: 3px;
+    background-color: lightblue;
+    border: 2px solid mediumblue;
+    border-radius: 8%;
+    margin-left: 3%;
+}
+
+.search {
+    background-color: rgb(228, 140, 92);
+    text-align: center;
+    border: 2px solid rgb(121, 54, 33);
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+input {
+    border: 2px solid rgb(121, 54, 33);
+    border-radius: 5px;
+    padding: 5px;
+    width: 30%;
+}
+
+.delete {
+    margin: 0 auto;
+}
+
+.other_button {
+    background-color: gray;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form>button:hover {
+    background-color: lightgray;
+}
+
+.delete>button:hover {
+    background-color: lightgray;
+}
+
+@media only screen and (max-width: 1000px) {
+    .task {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: space-between;
+    }
+    .tag {
+        text-align: center;
+    }
+}

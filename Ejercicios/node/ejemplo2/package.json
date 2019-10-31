@@ -1,0 +1,11 @@
+{
+  "name": "ejercicio2",
+  "version": "1.0.0",
+  "description": "ejercicio2",
+  "main": "ejercicio2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pablo Agudo Brun",
+  "license": "ISC"
+}
