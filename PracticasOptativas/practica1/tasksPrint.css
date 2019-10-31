@@ -1,0 +1,65 @@
+body {
+    font-family: Helvetica;
+    text-transform: lowercase;
+}
+
+@page {
+    margin: 2cm;
+}
+
+.user_info,
+.task_button,
+.search,
+.delete {
+    display: none;
+}
+
+main>div {
+    display: list-item;
+    margin-left: 1em;
+}
+
+h1::first-letter,
+h2::first-letter,
+h3::first-letter {
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+h3 {
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+h3::after {
+    content: ':';
+}
+
+.tag {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+#t2 {
+    margin-left: 2em;
+}
+
+.task_end {
+    text-decoration: line-through;
+}
+
+.tag:before {
+    content: '(';
+}
+
+.tag:after {
+    content: ')';
+}

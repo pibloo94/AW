@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <link rel="stylesheet" media="screen" href="tasksScreen.css">
+    <link rel="stylesheet" media="print" href="tasksPrint.css">
+</head>
+
+<body>
+    <header>
+        <h1>TAREAS</h1>
+        <div class="user_info">
+            <img class="user_image" src="resources/user.png" alt="user image">
+            <div>
+                <p class="user_mail">usuario@gmail.com</p>
+                <a class="user_disconect" href=" ">Desconectar</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="t1" class="task">
+            <h3>PREPARAR PRÁCTICA AW</h3>
+            <span class="tag">AW</span>
+            <span class="tag">PRÁCTICA</span>
+            <button class="task_button">MARCAR FINALIZADA</button>
+        </div>
+        <div id="t2" class="task">
+            <h3 class="task_end">MIRAR FECHAS CONGRESO</h3>
+        </div>
+        <div id="t3" class="task">
+            <h3>IR AL SUPERMERCADO</h3>
+            <span class="tag">PERSONAL</span>
+            <button class="task_button">MARCAR FINALIZADA</button>
+        </div>
+        <div id="t4" class="task">
+            <h3>MUDANZA</h3>
+            <span class="tag">PERSONAL</span>
+            <button class="task_button">MARCAR FINALIZADA</button>
+        </div>
+        <div id="s1" class="search">
+            <form class="search_form" action="index.html" method="post">
+                <input type="text" placeholder="Introducir nombre tarea" required>
+                <button class="other_button">BUSCAR</button>
+            </form>
+        </div>
+        <div id="b1" class="delete">
+            <button class="other_button">ELIMINAR TAREAS COMPLETADAS</button>
+        </div>
+    </main>
+</body>
+
+</html>
