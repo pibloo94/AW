@@ -1,0 +1,14 @@
+{
+  "name": "ejercicio2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ejercicio2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pablo Agudo Brun",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}
