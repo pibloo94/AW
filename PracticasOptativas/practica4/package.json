@@ -1,0 +1,19 @@
+{
+  "name": "practica4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "mysql": "^2.17.1",
+    "nodemon": "^2.0.0"
+  }
+}

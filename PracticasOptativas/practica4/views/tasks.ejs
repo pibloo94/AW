@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <link rel="stylesheet" media="screen" href="css/tasksScreen.css">
+    <link rel="stylesheet" media="print" href="css/tasksPrint.css">
+</head>
+
+<body>
+    <header>
+        <h1>TAREAS</h1>
+        <div class="user_info">
+            <img class="user_image" src="img/user.png" alt="user image">
+            <div>
+                <p class="user_mail">usuario@gmail.com</p>
+                <a class="user_disconect" href=" ">Desconectar</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <% tasks.forEach(function(task) { %>
+            <div id="t1" class="task">
+                <% if (!task.done) { %>
+                    <h3><%= task.text %></h3>
+                    <% task.tags.forEach(function(tag) { %>
+                        <span class="tag"><%= tag %></span>
+                    <% }); %>
+                    <button class="task_button">MARCAR FINALIZADA</button>
+                <% } else { %>
+                    <h3 class="done"><%= task.text %></h3>
+                <% } %>
+            </div>
+        <% }); %>
+
+        <div id="s1" class="search">
+            <form class="search_form" action="index.html" method="post">
+                <input type="text" placeholder="Introducir nombre tarea" required>
+                <button class="other_button">BUSCAR</button>
+            </form>
+        </div>
+        <div id="b1" class="delete">
+            <button class="other_button">ELIMINAR TAREAS COMPLETADAS</button>
+        </div>
+    </main>
+</body>
+
+</html>
