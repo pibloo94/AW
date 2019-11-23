@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+h1{
+    text-align: center;
+}
+
+th{
+    background-color:darkblue;
+    text-align: center;
+    color:white;
+    border:2px solid black;
+}
+
+td{
+    background-color: lightgray;
+    text-align: center;
+    border:2px solid black;
+}
+
+.usuarios{
+    display:flex;
+    justify-content: center;
+}

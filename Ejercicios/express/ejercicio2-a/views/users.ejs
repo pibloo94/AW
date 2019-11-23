@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de usuarios</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <ul>
+        <% users.forEach(function(user, i) { %>
+            <li>
+                <%= user %>
+                    <a href="eliminar/<%=i%>">Borrar</a>
+            </li>
+
+            <% }); %>
+
+    </ul>
+</body>
+
+</html>

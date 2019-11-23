@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de usuarios</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <ul>
+        <% users.forEach(function(user, i) { %>
+            <li>
+                <%= user %>
+                    <div>
+                        <form action="actualizar" method="POST">
+                            <input type="hidden" name="ident" value="<%=i%>">
+                            <input type="submit" value="Borrar">
+                        </form>
+                    </div>
+            </li>
+            <% }); %>
+    </ul>
+</body>
+
+</html>

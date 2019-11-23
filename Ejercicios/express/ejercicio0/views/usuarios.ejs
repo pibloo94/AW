@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de usuarios</title>
+    <metacharset="utf-8">
+    <link rel="stylesheet" href="css/usuarios.css">
+</head>
+
+<body>
+    <h1>USUARIOS</h1>
+    <div class="usuarios">
+        <table>
+            <tr>
+                <th><em>Nombre</em></th>
+                <th><em>Número</em></th>
+            </tr>
+            <% users.forEach(function(user) { %>
+            <tr>
+                <td><em><%=user.nombre %></em></td>
+                <td><em><%=user.numero %></em></td>
+            </tr>
+            <% }); %>
+        </table>
+    </div>
+</body>
+</html>
