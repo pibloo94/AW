@@ -12,30 +12,27 @@ class DAOTasks {
 			if(err){
 				callback(err, null);
 			}else{
-				const sql = "SELECT * FROM task JOIN tag ON taskId = id WHERE user = ? ";
+				const sql = "SELECT * FROM task LEFT JOIN tag ON taskId = id WHERE user = ? ";
 				connection.query(sql, [email], function(err, resultado){
 					connection.release();
 					if(err){
 						callback(err, null);
 					}else{
-                        //TODO
-                        let array = [];
-						let tags = [];
-						
-						resultado.forEach(element => {
-							tags.push(element.tag);
-						});
-
-						array.push({
-                            "id": resultado[0].id,
-                            "text": resultado[0].text,
-                            "done": resultado[0].done,
-                            "tags": tags,
-						});
-
-                        resultado = array;
-                        
-						callback(null, resultado);
+                        let tasks = [];
+						for (let item of resultado) {
+							if (!tasks[item.id]){
+								tasks[item.id] = {
+									id: item.id,
+									text: item.text,
+									done: item.done,
+									tags: []
+								};
+							}
+							if (item.tag){
+								tasks[item.id].tags.push(item.tag);
+							}
+						}
+						callback(null, tasks);
 					}
 				});
 			}
@@ -55,6 +52,9 @@ class DAOTasks {
 					if (err) {
 						callback(err);
 					} else {
+						if (task.tags == null || task.tags == undefined) {
+							return;
+						}
 						const sql2 = "INSERT INTO tag (taskId, tag) VALUES ?";
 						let insertar = [];
 						task.tags.forEach(e => {

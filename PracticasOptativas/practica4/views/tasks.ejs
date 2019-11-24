@@ -38,13 +38,13 @@
         <% }); %>
 
         <div id="s1" class="add">
-            <form class="addd_form" action="/addTask" method="POST">
-                <input type="text" placeholder="Introducir nombre tarea" required>
-                <input class="other_button" type="submit" value="AÑADIR">
+            <form class="add_form" action="/addTask" method="POST">
+                <input class="add_text" type="text" name="text" placeholder="Introducir nombre tarea" required>
+                <input class="task_button add_button" type="submit" value="AÑADIR">
             </form>
         </div>
         <div id="b1" class="delete">
-            <a href="deleteCompleted/" class="other_button">ELIMINAR TAREAS COMPLETADAS</a>
+            <a href="deleteCompleted/" class="task_button">ELIMINAR TAREAS COMPLETADAS</a>
         </div>
     </main>
 </body>

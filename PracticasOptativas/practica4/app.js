@@ -5,7 +5,6 @@ const utils = require("./utils");
 const path = require("path");
 const mysql = require("mysql");
 const express = require("express");
-const bodyParser = require("body-parser");
 const fs = require("fs");
 
 // Crear un servidor Express.js
@@ -35,25 +34,46 @@ let listaTareas = [
 
 app.get("/", function(request, response){
     response.status(200);
-    //response.sendFile(path.join(__dirname, "views", "tasks.html"));
+    response.redirect("/tasks");
 });
 
-app.get("/tasks.html", function(request, response){
-    response.status(200);
-    // Busca la plantilla "views/tasks.ejs"
-    // La variable 'tasks' que hay dentro de esta plantilla tomará
-    // el valor del array 'tasks'.
-    response.render("tasks", {tasks: listaTareas});
+app.get("/tasks", function(request, response){
+    let daoTasks = new DAOTasks(pool);
+
+    daoTasks.getAllTasks("usuario@ucm.es", function (err, result) {
+        if (err) {
+            console.log("Error en leer tareas");
+        } else {
+            response.render("tasks", { tasks: result });
+            console.log("Exito en leer tareas");
+        }
+    });
+
+});
+
+app.post("/addTask", function(request, response){
+    let daoTasks = new DAOTasks(pool);
+
+    let task = createTask(request.body.text);
+    
+    daoTasks.insertTask("usuario@ucm.es", task, function (err) {
+        if (err) {
+            console.log("Error en insertar tarea");
+        } else {
+            console.log("Exito en insertar tarea");
+            response.redirect('back');       
+        }
+    });
 });
 
 app.get("/finish/:id", function(request, response) {
     let daoTasks = new DAOTasks(pool);
     
-    daoTasks.markTaskDone(request.params.id + 1, function(err){ //TODO: falta el middleware
+    daoTasks.markTaskDone(request.params.id, function(err){
         if(err){
             console.log("Error en finalizar tarea");
         }else{
-            response.redirect("/tasks.html");
+            response.redirect("/tasks");
             console.log("Exito en finalizar tarea");
         }
     });
@@ -61,11 +81,12 @@ app.get("/finish/:id", function(request, response) {
 
 app.get("/deleteCompleted", function(request, response){
     let daoTasks = new DAOTasks(pool);
-    daoTasks.deleteCompleted("usuario@ucm.es", function(err){ //TODO: falta el middleware
+
+    daoTasks.deleteCompleted("usuario@ucm.es", function(err){
         if(err){
             console.log("Error al eliminar tareas");
         }else{
-            response.redirect("/tasks.html");
+            response.redirect("/tasks");
             console.log("Exito al eliminar tareas");
         }
     });
@@ -79,3 +100,13 @@ app.listen(config.port, function (err) {
         console.log(`Servidor arrancado en el puerto ${config.port}`);
     }
 });
+
+createTask = text => {
+    let tags = text.match(/@\w*/g)
+    if (tags != undefined && tags.length != 0) {
+        tags = tags.map(e => e.substring(1));
+    }
+    text = text.replace(/@\w*/g, "").trim();
+
+    return { text, tags, done: false }
+}
