@@ -22,28 +22,29 @@
         </div>
     </header>
     <main>
-        <% tasks.forEach(function(task) { %>
-            <div id="t1" class="task">
+        <% tasks.forEach(function(task, i) { %>
                 <% if (!task.done) { %>
+                    <div id="<%=i%>" class="task">
                     <h3><%= task.text %></h3>
                     <% task.tags.forEach(function(tag) { %>
                         <span class="tag"><%= tag %></span>
                     <% }); %>
-                    <button class="task_button">MARCAR FINALIZADA</button>
+                    <a href="finish/<%=i%>" class="task_button">MARCAR FINALIZADA</a>
                 <% } else { %>
+                    <div id="<%=i%>" class="task done">
                     <h3 class="done"><%= task.text %></h3>
                 <% } %>
             </div>
         <% }); %>
 
-        <div id="s1" class="search">
-            <form class="search_form" action="index.html" method="post">
+        <div id="s1" class="add">
+            <form class="addd_form" action="/addTask" method="POST">
                 <input type="text" placeholder="Introducir nombre tarea" required>
-                <button class="other_button">BUSCAR</button>
+                <input class="other_button" type="submit" value="AÑADIR">
             </form>
         </div>
         <div id="b1" class="delete">
-            <button class="other_button">ELIMINAR TAREAS COMPLETADAS</button>
+            <a href="deleteCompleted/" class="other_button">ELIMINAR TAREAS COMPLETADAS</a>
         </div>
     </main>
 </body>

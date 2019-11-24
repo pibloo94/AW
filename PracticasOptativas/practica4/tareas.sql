@@ -13,7 +13,7 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `tag`
 --
 
-CREATE TABLE `tag` (
+CREATE OR REPLACE TABLE `tag` (
   `taskId` int(11) NOT NULL,
   `tag` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -24,7 +24,7 @@ CREATE TABLE `tag` (
 -- Estructura de tabla para la tabla `task`
 --
 
-CREATE TABLE `task` (
+CREATE  OR REPLACE TABLE `task` (
   `id` int(11) NOT NULL,
   `user` varchar(100) NOT NULL,
   `text` text NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE `task` (
 -- Estructura de tabla para la tabla `user`
 --
 
-CREATE TABLE `user` (
+CREATE  OR REPLACE TABLE `user` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `img` varchar(100) DEFAULT NULL
@@ -91,5 +91,28 @@ ALTER TABLE `tag`
 --
 ALTER TABLE `task`
   ADD CONSTRAINT `task_ibfk_1` FOREIGN KEY (`user`) REFERENCES `user` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
+
+
+--
+-- Insercciones tabla `user`
+--
+INSERT INTO `user` (`email`, `password`, `img`) VALUES ('usuario@ucm.es', '1234', NULL);
+
+--
+-- Insercciones tabla `task`
+--
+INSERT INTO `task` (`id`, `user`, `text`, `done`) VALUES ('1', 'usuario@ucm.es', 'PREPARAR PRACTICA AW', '0');
+INSERT INTO `task` (`id`, `user`, `text`, `done`) VALUES ('2', 'usuario@ucm.es', 'MIRAR FECHAS CONGRESO', '1');
+INSERT INTO `task` (`id`, `user`, `text`, `done`) VALUES ('3', 'usuario@ucm.es', 'IR AL SUPERMERCADO', '0');
+INSERT INTO `task` (`id`, `user`, `text`, `done`) VALUES ('4', 'usuario@ucm.es', 'MUDANZA', '0');
+
+--
+-- Insercciones tabla `tag`
+--
+INSERT INTO `tag` (`taskId`, `tag`) VALUES ('1', 'AW');
+INSERT INTO `tag` (`taskId`, `tag`) VALUES ('1', 'PRACTICA');
+INSERT INTO `tag` (`taskId`, `tag`) VALUES ('3', 'PERSONAL');
+INSERT INTO `tag` (`taskId`, `tag`) VALUES ('4', 'PERSONAL');
+
+COMMIT;
