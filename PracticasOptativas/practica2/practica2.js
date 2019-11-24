@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //PRACTICA 2 AW
 //DANIEL FIDALGO PANERA y PABLO AGUDO BRUN
 
@@ -74,7 +74,7 @@ createTask = text => {
 }
 
 console.log(createTask("Ir al medico @personal @salud"));
-=======
+
 //PRACTICA 2 AW
 //DANIEL FIDALGO PANERA y PABLO AGUDO BRUN
 
@@ -150,5 +150,4 @@ createTask = text => {
 }
 
 console.log(createTask("Ir al medico @personal @salud"));
->>>>>>> ababe2ae20ac3547cf6ce89a098ce66544fad11f
 console.log(createTask("Ir al"));
