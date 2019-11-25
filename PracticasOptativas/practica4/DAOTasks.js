@@ -52,21 +52,23 @@ class DAOTasks {
 					if (err) {
 						callback(err);
 					} else {
-						if (task.tags == null || task.tags == undefined) {
-							return;
+						if (task.tags == null || task.tags.length == 0) {
+							callback(null);
 						}
-						const sql2 = "INSERT INTO tag (taskId, tag) VALUES ?";
-						let insertar = [];
-						task.tags.forEach(e => {
-							insertar.push([resultado.insertId, e]);
-						});
-						connection.query(sql2, [insertar], function (err, resultado2) {
-							if (err) {
-								callback(err);
-							} else {
-								callback(null);
-							}
-						});
+						else {
+							const sql2 = "INSERT INTO tag (taskId, tag) VALUES ?";
+							let insertar = [];
+							task.tags.forEach(e => {
+								insertar.push([resultado.insertId, e]);
+							});
+							connection.query(sql2, [insertar], function (err, resultado2) {
+								if (err) {
+									callback(err);
+								} else {
+									callback(null);
+								}
+							});
+						}
 					}
 				});
 			}
