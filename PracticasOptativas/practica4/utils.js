@@ -46,7 +46,7 @@ createTask = text => {
     }
     text = text.replace(/@\w*/g, "").trim();
 
-    return { text, tags }
+    return { text, tags, done: false }
 }
 
 module.exports = {

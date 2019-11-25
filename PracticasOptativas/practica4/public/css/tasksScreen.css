@@ -119,7 +119,6 @@ h3 {
     background-color: lightblue;
     border: 2px solid mediumblue;
     border-radius: 8%;
-    margin-left: 3%;
 }
 
 .add {
@@ -135,6 +134,9 @@ h3 {
 }
 
 .add_form{
+     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 }
@@ -150,6 +152,10 @@ input {
     margin: 0 auto;
 }
 
+h3, .task, .tag, .task_button, .add_text {
+    margin: 0.3em;
+}
+
 @media only screen and (max-width: 1000px) {
     .task {
         display: flex;
@@ -161,9 +167,10 @@ input {
         text-align: center;
     }
 
-    .add {
+    .add .add_form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
 }

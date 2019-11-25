@@ -25,12 +25,14 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+/*
 let listaTareas = [
     { text: "Preparar práctica AW", tags: ["AW", "practica"] },
     { text: "Mirar fechas congreso", done: true, tags: [] },
     { text: "Ir al supermercado", tags: ["personal"] },
     { text: "Mudanza", done: false, tags: ["personal"] },
 ];
+*/
 
 app.get("/", function(request, response){
     response.status(200);
@@ -38,9 +40,7 @@ app.get("/", function(request, response){
 });
 
 app.get("/tasks", function(request, response){
-    let daoTasks = new DAOTasks(pool);
-
-    daoTasks.getAllTasks("usuario@ucm.es", function (err, result) {
+    daoT.getAllTasks("usuario@ucm.es", function (err, result) {
         if (err) {
             console.log("Error en leer tareas");
         } else {
@@ -52,24 +52,20 @@ app.get("/tasks", function(request, response){
 });
 
 app.post("/addTask", function(request, response){
-    let daoTasks = new DAOTasks(pool);
-
-    let task = createTask(request.body.text);
+    let task = utils.createTask(request.body.text);
     
-    daoTasks.insertTask("usuario@ucm.es", task, function (err) {
+    daoT.insertTask("usuario@ucm.es", task, function (err) {
         if (err) {
             console.log("Error en insertar tarea");
         } else {
             console.log("Exito en insertar tarea");
-            response.redirect('back');       
+            response.redirect("/tasks");
         }
     });
 });
 
 app.get("/finish/:id", function(request, response) {
-    let daoTasks = new DAOTasks(pool);
-    
-    daoTasks.markTaskDone(request.params.id, function(err){
+    daoT.markTaskDone(request.params.id, function(err){
         if(err){
             console.log("Error en finalizar tarea");
         }else{
@@ -80,9 +76,7 @@ app.get("/finish/:id", function(request, response) {
 });
 
 app.get("/deleteCompleted", function(request, response){
-    let daoTasks = new DAOTasks(pool);
-
-    daoTasks.deleteCompleted("usuario@ucm.es", function(err){
+    daoT.deleteCompleted("usuario@ucm.es", function(err){
         if(err){
             console.log("Error al eliminar tareas");
         }else{
@@ -100,13 +94,3 @@ app.listen(config.port, function (err) {
         console.log(`Servidor arrancado en el puerto ${config.port}`);
     }
 });
-
-createTask = text => {
-    let tags = text.match(/@\w*/g)
-    if (tags != undefined && tags.length != 0) {
-        tags = tags.map(e => e.substring(1));
-    }
-    text = text.replace(/@\w*/g, "").trim();
-
-    return { text, tags, done: false }
-}
