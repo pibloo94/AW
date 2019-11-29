@@ -1,0 +1,11 @@
+<body>
+    <%- include("header") %>
+    <div>
+        <ul>
+            <% usuarios.forEach(function(u) { %>
+            <%- include("userView", { usuario: u }) %>
+            <% }); %>
+        </ul>
+    </div>
+    <%- include("footer") %>
+</body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Formulario</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/form_post.css">
+   </head>
+   <body>
+      <form method="POST" action="procesar_post">
+         <div>
+            <label for="formNombre">Nombre:</label>
+            <input type="text" name="nombre" id="formNombre">
+         </div>
+         <div>
+            <label for="formEdad">Edad:</label>
+            <input type="text" name="edad" id="formEdad">
+         </div>
+         <div>
+            <input type="radio" name="sexo" value="H" id="formHombre">
+            <label for="formHombre">Hombre</label>
+            <input type="radio" name="sexo" value="M" id="formMujer">
+            <label for="formMujer">Mujer</label>
+         </div>
+         <div>
+            <input type="checkbox" name="fumador" value="ON"
+               id="formFumador">
+            <label for="formFumador">Fumador/a</label>
+         </div>
+         <div>
+            <input type="submit" value="Enviar">
+         </div>
+      </form>
+   </body>
+</html>
+

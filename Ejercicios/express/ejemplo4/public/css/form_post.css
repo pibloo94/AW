@@ -1,0 +1,16 @@
+form {
+    display: grid;
+    width: 30%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto;
+    background-color: rgb(169, 228, 225);
+    border: 2px solid rgb(30, 180, 173);
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+form > div {
+    padding: 8px;
+}

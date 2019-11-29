@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Información recibida</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1>Información recibida</h1>
+    <table>
+        <tr>
+            <th>Nombre:</th>
+            <td> <%= nombre %> </td>
+        </tr>
+        <tr>
+            <th>Apellidos:</th>
+            <td> <%= apellidos %> </td>
+        </tr>
+        <tr>
+            <th>Fumador/a:</th>
+            <td> <%= fumador %> </td>
+        </tr>
+        <% if (imagen) { %>
+        <tr>
+            <td>Foto:</td>
+            <td><img src="/imagen/<%= imagen %> "></td>
+        </tr>
+        <% } %>
+    </table>
+</body>
+
+</html>
