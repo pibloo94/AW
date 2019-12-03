@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <link rel="stylesheet" media="screen" href="css/tasksScreen.css">
+    <link rel="stylesheet" media="print" href="css/tasksPrint.css">
+</head>
+
+<body>
+    <header>
+        <h1>TAREAS</h1>
+        <div class="user_info">
+            <img class="user_image" src="/imagenUsuario" alt="user image">
+            <div>
+                <p class="user_mail"><%= email %></p>
+                <form action="logout" method="GET">    
+                    <input class="user_disconect" type="submit" value="Desconectar"/>                
+                </form>
+            </div>
+        </div>
+    </header>
+    <main>
+        <% tasks.forEach(function(task, i) { %>
+                <% if (!task.done) { %>
+                    <div id="<%=i%>" class="task">
+                    <h3><%= task.text %></h3>
+                    <% task.tags.forEach(function(tag) { %>
+                        <span class="tag"><%= tag %></span>
+                    <% }); %>
+                    <a href="finish/<%=i%>" class="task_button">MARCAR FINALIZADA</a>
+                <% } else { %>
+                    <div id="<%=i%>" class="task done">
+                    <h3 class="done"><%= task.text %></h3>
+                <% } %>
+            </div>
+        <% }); %>
+
+        <div id="s1" class="add">
+            <form class="add_form" action="/addTask" method="POST">
+                <input class="add_text" type="text" name="text" placeholder="Introducir nombre tarea" required>
+                <input class="task_button add_button" type="submit" value="AÑADIR">
+            </form>
+        </div>
+        <div id="b1" class="delete">
+            <a href="deleteCompleted/" class="task_button">ELIMINAR TAREAS COMPLETADAS</a>
+        </div>
+    </main>
+</body>
+
+</html>
