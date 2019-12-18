@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="css/tasksScreen.css">
+</head>
+
+<body>
+    <header>
+        <h1>TAREAS</h1>
+    </header>
+    <main>
+		<form action="login" method='POST'>
+			<table class="form_login">
+				<tr>
+					<td>Dirección de correo</td>
+					<td><input class="add_text input" type='text' name='email'></td>
+				</tr>
+				<tr>
+					<td>Contraseña</td>
+					<td><input class="add_text input" type='password' name='password' /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input class="task_button" id="send" type="submit" value="Aceptar"/></td>
+				</tr>
+			</table>
+		</form>
+		<% if (typeof errorMsg != "undefined") { %>
+			<h3 class="error_msg"><%= errorMsg %></h3>
+		<% } %>
+	</main>
+</body>
+
+</html>
