@@ -97,8 +97,8 @@ ALTER TABLE `task`
 --
 -- Insercciones tabla `user`
 --
-INSERT INTO `user` (`email`, `password`, `img`) VALUES ('usuario@ucm.es', '1234', 'practica5\\profile_imgs\\profile_logo.png');
-INSERT INTO `user` (`email`, `password`, `img`) VALUES ('nuevo@ucm.es', '1234', 'practica5\\profile_imgs\\friend.png');
+INSERT INTO `user` (`email`, `password`, `img`) VALUES ('usuario@ucm.es', '1234', 'profile_logo.png');
+INSERT INTO `user` (`email`, `password`, `img`) VALUES ('nuevo@ucm.es', '1234', 'friend.png');
 INSERT INTO `user` (`email`, `password`, `img`) VALUES ('prueba@ucm.es', '1234', NULL);
 
 --

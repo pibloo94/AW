@@ -9,7 +9,7 @@
     <link rel="stylesheet" media="screen" href="css/tasksScreen.css">
 	<link rel="stylesheet" media="print" href="css/tasksPrint.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="/javacript/tasks.js"></script>
+	<script src="javascripts/tasks.js"></script>
 </head>
 
 <body>
@@ -42,30 +42,34 @@
         <% }); %>
 
         <div id="s1" class="add">
-			<form class="add_form" action="/addTask" method="POST">
-				<table>
-					<tr>
-						<td><label>NOMBRE DE TAREA</label></td>
-					</tr>
-					<tr>
-						<td><input class="add_text" type="text" name="text" placeholder="Introducir nombre tarea" required></td>
-					</tr>
-					<tr>
-						<td>
-							<input class="add_text" type="text" name="text" required>
-							<button class="add_tag">Añadir Tag</button>	
-						</td>
-					</tr>
-					<tr>
-						<h3></h3>
-                        <span class="tag"></span>
-					</tr>
-					<tr>
-						<td class="center_button">
-							<input id="special" class="task_button add_button" type="submit" value="AÑADIR">
-						</td>
-					</tr>
-				</table>
+            <form class="add_form" action="/addTask" method="POST">
+                <table>
+                    <tr>
+                        <td><label>NOMBRE DE TAREA</label></td>
+                    </tr>
+                    <tr>
+                        <td><input id="texto" class="add_text" type="text" placeholder="Introducir nombre tarea" required></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id='tagText' class="add_text" type="text">
+                            <button id="addTag" class="add_tag" type="button">Añadir Tag</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="newTask" class="task">
+                                <h3 id="mensaje"></h3>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center_button">
+                            <input id="text" type="text" name="text" value="" hidden>
+                            <input id="special" class="task_button add_button" type="submit" value="AÑADIR">
+                        </td>
+                    </tr>
+                </table>
             </form>
         </div>
         <div id="b1" class="delete">
