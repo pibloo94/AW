@@ -1,0 +1,37 @@
+<%- include('header_loged'); -%>
+    <main>
+		<h1><%= question.title %></h1>
+		<% if (answered) { %>
+			<p>Ya has contestado a esta pregunta</p>
+		<% }else{ %>           
+			<p>No has contestado a esta pregunta</p>
+			<a href="/question/answer/<%= question.id_question %>" class="input_button">Contestar pregunta</a>
+		<% } %>           
+		<p>Los siguientes amigos han contestado a esta pregunta</p>
+		<!-- TODO: ESTO ES PARTE 3-->
+        <div class="friends">
+            <% friendsAnswer.forEach(function(friend) { %>
+                <div class="friend">
+                    <% if (friend.image){ %>
+                        <img src="/user/uploads/<%= friend.image%>" alt="imagen de usuario" height="72px" width="72px">
+                    <% }else{ %>
+                        <img src="/images/profile_logo.png" alt="imagen de usuario" height="72px" width="72px">
+                    <% } %>                       
+                    <h3><%= friend.fullname %></h3>
+                    <div>
+                        <% if (friend.correct == null){ %>
+                            <a href="/question/guess/<%= question.id_question + '/' + friend.id_user %>" class="input_button">Adivinar</a>
+                        <% }else{ %>
+                            <% if (friend.correct == 1) { %>
+                                <h3 class="correct">Has acertado</h3>
+                            <% }%>
+                            <% if (friend.correct == 0) { %>
+                                <h3 class="incorrect">Has fallado</h3>
+                            <% }%>
+                        <% } %>                       
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </main>
+<%- include('footer'); -%>

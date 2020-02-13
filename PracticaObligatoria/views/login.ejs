@@ -1,0 +1,23 @@
+<%- include('header_init'); -%>
+	<main>
+		<h1>Entrar</h1>
+		<form name='form_login' action="login" method='POST'>
+			<table>
+				<tr>
+					<td>Email:</td>
+					<td><input class="input_text" type='text' name='email'></td>
+				</tr>
+				<tr>
+					<td>Contraseña:</td>
+					<td><input class="input_text" type='password' name='password' /></td>
+				</tr>
+				<tr>
+					<td><input class="input_button" id="send" type="submit" value="Enviar" /></td>
+				</tr>
+			</table>
+		</form>
+		<% if (typeof errorMsg != "undefined") { %>
+			<h3 class="error_msg"><%= errorMsg %></h3>
+		<% } %>
+	</main>
+<%- include('footer'); -%>

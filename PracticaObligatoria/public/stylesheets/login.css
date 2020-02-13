@@ -1,0 +1,20 @@
+nav {
+    padding: 1em;
+}
+
+table {
+    margin: auto;
+    background-color: lightgray;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+#send {
+    margin-top: 10px;
+    margin-left: 100%;
+}
+
+.error_msg {
+    text-align: center;
+    color: red;
+}

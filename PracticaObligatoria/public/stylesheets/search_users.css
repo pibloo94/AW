@@ -1,0 +1,41 @@
+.search_results {
+    background-color: lightgray;
+    padding: 1%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.search_friend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.search_results>.search_friend:not(:first-child) {
+    border-top: 1px solid white;
+    width: 100%;
+}
+
+h3{
+    margin-right: 5em;
+}
+
+.peticion{
+    color: orangered;
+}
+
+.amigos{
+    color: green;
+}
+
+@media only screen and (max-width: 550px) {
+    .search_results {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

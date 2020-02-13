@@ -1,0 +1,15 @@
+table {
+    margin: auto;
+    background-color: lightgray;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.input_text{
+    margin: 0.5em;
+}
+
+#send {
+    margin-top: 10px;
+    margin-left: 100%;
+}

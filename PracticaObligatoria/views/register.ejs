@@ -1,0 +1,53 @@
+<%- include('header_init'); -%>
+<main>
+    <h1>Nuevo Usuario</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Email:</td>
+                <td><input class="input_text" type='email' name='email' value='' required></td>
+            </tr>
+            <tr>
+                <td>Contraseña:</td>
+                <td><input class="input_text" type='password' name='password' required/></td>
+            </tr>
+            <tr>
+                <td>Nombre completo:</td>
+                <td><input class="input_text" type='text' name='fullname' required/></td>
+            </tr>
+            <tr>
+                <td>Sexo:</td>
+                <td>
+                    <input class="input_radio" type="radio" name='sex' value="M"/>Masculino
+                    <input class="input_radio" type="radio" name='sex' value="F"/>Femenino
+                    <input class="input_radio" type="radio" name='sex' value="O"/>Otro
+                </td>
+            </tr>
+            <tr>
+                <td>Fecha de nacimiento:</td>
+                <td><input class="input_date" type='date' name='birthdate' max='2019-12-11' required/></td>
+            </tr>
+            <tr>
+                <td>Imagen de perfil:</td>
+                <td><input class="input_image" type='file' accept="image/png, image/jpeg" name="photo"/></td>
+            </tr>
+            <tr>
+                <td><input class="input_button" id="send" type="submit" value="Enviar"/></td>
+            </tr>
+        </table>
+    </form>
+    <% if (typeof errorMsg != "undefined") { %>
+        <h3 class="error_msg"><%= errorMsg %></h3>
+	<% } %>
+	<% if (errores.length>0) {%>
+	<div class="error_msg caja_errores">
+		<h3>La información introducida en el formulario es incorrecta</h3>
+		<ul>
+			<% errores.forEach(function(error) { %>
+				<li><%= error.msg %></li>
+			<% }); %>
+		</ul>
+	</div>
+	<%}%>
+</main>
+<%- include('footer'); -%>
