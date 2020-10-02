@@ -114,6 +114,3 @@ INSERT INTO `answer` (`question`, `user`, `answer`, `other`) VALUES ('1', '4', '
 INSERT INTO `answer` (`question`, `user`, `answer`, `other`) VALUES ('6', '5', 'b', '');
 INSERT INTO `answer` (`question`, `user`, `answer`, `other`) VALUES ('3', '2', 'a', '');
 */
-
-
-
