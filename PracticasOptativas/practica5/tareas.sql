@@ -93,7 +93,6 @@ ALTER TABLE `task`
   ADD CONSTRAINT `task_ibfk_1` FOREIGN KEY (`user`) REFERENCES `user` (`email`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 
-
 --
 -- Insercciones tabla `user`
 --
